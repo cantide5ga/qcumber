@@ -1,0 +1,22 @@
+DECLARE FUNCTION decToBin$ (decimal#)
+DECLARE FUNCTION fileExists% (file$)
+DECLARE FUNCTION getBit% (decimal%, position%)
+DECLARE FUNCTION bitShiftLeft% (decimal%, shifts%)
+DECLARE FUNCTION bitShiftRight% (decimal%, shifts%)
+DECLARE FUNCTION peekTick% ()
+DECLARE SUB sortPairAscend (array%(), otherArray%())
+DECLARE SUB hold (delay%)
+DECLARE FUNCTION binToDec# (bit$)
+DECLARE FUNCTION decToBaseN$ (baseTen#, n%)
+DECLARE FUNCTION decToHex$ (baseTen#)
+DECLARE FUNCTION isNil% (value$)
+DECLARE FUNCTION getConfig$ (key$)
+DECLARE SUB genFat ()
+DECLARE SUB logit (message$, context$, module$, isError%)
+DECLARE FUNCTION toBool% (char$)
+DECLARE FUNCTION getIfHasConfig$ (key$)
+DECLARE SUB teardownTest ()
+DECLARE SUB center (text$)
+
+REM $INCLUDE: 'c:\qb4.5\qb.bi'
+

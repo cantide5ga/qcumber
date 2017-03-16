@@ -1,0 +1,11 @@
+DECLARE FUNCTION hasValInArr% (value%, array%())
+DECLARE SUB remove (value%, array%())
+DECLARE FUNCTION firstOccuranceOf% (value%, array%())
+DECLARE SUB removeAt (index%, array%())
+DECLARE SUB copyArray (fromArr%(), toArr%())
+DECLARE SUB add (value%, array%())
+DECLARE FUNCTION pop% (array%())
+DECLARE FUNCTION sizeOf% (array%())
+DECLARE SUB push (value%, array%())
+DECLARE SUB removeMany (array%(), exclude%())
+

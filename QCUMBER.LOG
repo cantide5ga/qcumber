@@ -1,0 +1,25 @@
+01-23-2016    15:43:58       not found.   load4BitBmp() GRAPHIC
+              01-23-2016    15:49:23       not found.   load4BitBmp() GRAPHIC
+              01-23-2016    15:50:36       not found.   load4BitBmp() GRAPHIC
+01-23-2016: 16:09:50;  not found.; GRAPHIC: load4BitBmp()
+01-23-2016: 16:17:17 @ GRAPHIC: load4BitBmp() {  not found. }
+01-23-2016: 16:19:27 @ GRAPHIC: load4BitBmp() {  not found. }
+01-23-2016: 16:19:50 @ GRAPHIC: load4BitBmp() {  not found. }
+01-23-2016: 16:20:18 @ GRAPHIC: load4BitBmp() {  not found. }
+01-23-2016: 16:20:33 @ GRAPHIC: load4BitBmp() {  not found. }
+01-23-2016: 16:25:01 @ UTILITY: getConfig() { Config key sprite_bmp not found. }
+01-23-2016: 16:27:48 @ GRAPHIC: load4BitBmp() {  not found. }
+01-23-2016: 16:28:06 @ GRAPHIC: load4BitBmp() {  not found. }
+01-23-2016: 16:34:15 @ GRAPHIC: load4BitBmp() {  not found. }
+[ERROR]  not found. { 01-23-2016: 16:52:48 @ GRAPHIC: load4BitBmp()
+[ERROR] Config key sprite_bmp not found. { 01-23-2016: 16:53:26 @ UTILITY: getConfig()
+[ERROR] Config key sprite_bmp not found. { 01-24-2016: 11:05:52 @ UTILITY: getConfig()
+[ERROR] Config key sprite_rsrc not found. { 03-25-2016: 13:36:26 @ UTILITY: getConfig()
+[ERROR] Config key sprite_rsrc not found. { 03-25-2016: 13:38:38 @ UTILITY: getConfig()
+[ERROR] Config key sprite_rsrc not found. { 03-25-2016: 14:12:06 @ UTILITY: getConfig()
+[ERROR] Config key sprite_rsrc not found. { 03-25-2016: 14:20:41 @ UTILITY: getConfig()
+[ERROR] Config key tile_rsrc not found. { 03-25-2016: 14:44:28 @ UTILITY: getConfig()
+[ERROR] sprites.bpm is not a valid BMP file. { 04-10-2016: 10:46:10 @ GRAPHIC: load4BitBmp()
+[ERROR] sprites.bpm is not a valid BMP file. { 04-10-2016: 10:46:14 @ GRAPHIC: load4BitBmp()
+[ERROR] tile.rsrc is not a valid BMP file. { 04-10-2016: 11:11:34 @ GRAPHIC: load4BitBmp()
+[ERROR] tile.rsrc is not a valid BMP file. { 04-10-2016: 11:11:39 @ GRAPHIC: load4BitBmp()

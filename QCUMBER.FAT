@@ -1,0 +1,368 @@
+TYPE PageType
+        value AS INTEGER
+END TYPE
+   
+TYPE DataType
+        value AS STRING * 1
+END TYPE
+
+TYPE DirectionType
+        value AS STRING * 1
+END TYPE
+
+TYPE JoyType
+        value AS INTEGER
+END TYPE
+
+TYPE HueType
+    value AS INTEGER
+END TYPE
+
+' Compile time type safety
+TYPE SafeType
+        ViewPage AS PageType
+        Buffer AS PageType
+        SpriteSheet AS PageType
+        TileSheet AS PageType
+        Integers AS DataType
+        Longs AS DataType
+        SFloat AS DataType
+        DFloat AS DataType
+        Rightward AS DirectionType
+        Leftward AS DirectionType
+        Downward AS DirectionType
+        Upward AS DirectionType
+        RightButton AS JoyType
+        DownButton AS JoyType
+        LeftButton AS JoyType
+        UpButton AS JoyType
+        AButton AS JoyType
+        BButton AS JoyType
+        StartButton AS JoyType
+        SelectButton AS JoyType
+        KeyHandlerKillCall AS JoyType
+        Black AS HueType
+        Gray AS HueType
+        Indigo AS HueType
+        Blue AS HueType
+        Violet AS HueType
+        Pink AS HueType
+        Red AS HueType
+        Orange AS HueType
+        Burnt AS HueType
+        Brown AS HueType
+        Forest AS HueType
+        Green AS HueType
+        Celadon AS HueType
+        Cadet AS HueType
+END TYPE
+
+
+DECLARE FUNCTION isPressed% (button AS ANY)
+
+DECLARE SUB loadSprite (code$, sprite%(), atIndex%)
+DECLARE SUB pageTo (page AS ANY)
+DECLARE SUB placeSprite (x%, y%, sprite%(), atIndex%, atFrame%)
+DECLARE SUB placeTile (code$, x%, y%)
+DECLARE SUB planarize (index%, w%, p AS ANY)
+DECLARE SUB flip ()
+DECLARE FUNCTION animate% (frame%, cycles%, goingLeft%, spriteFrameRate%)
+DECLARE SUB bLoadImage (sourceFile AS STRING, image AS ANY)
+DECLARE SUB specImage7 (image AS ANY, x1%, y1%, x2%, y2%)
+DECLARE SUB bSaveImage (file AS STRING, image AS ANY)
+DECLARE SUB scrollCrop (direction AS ANY, x1%, y1%, x2%, y2%, clipSize%)
+DECLARE SUB setColor (attribute%, colour AS ANY)
+DECLARE SUB specImage (image AS ANY, x1%, y1%, x2%, y2%, bpp%, p%, dat AS ANY)
+DECLARE FUNCTION getRgb$ (attrib%, colour AS ANY)
+DECLARE FUNCTION dePlanarize% (x%, y%, w%)
+DECLARE SUB specColor (colour AS ANY, r%, g%, b%)
+DECLARE SUB createMask (image AS ANY)
+DECLARE SUB bLoadScreen (file$)
+DECLARE SUB buildSprite (pose1 AS ANY, pose2 AS ANY, result%(), atIndex%)
+DECLARE SUB load4BitBmp (file AS STRING, fullDecode%)
+DECLARE SUB decorPrint (text$, colour%, shadowColor%)
+DECLARE SUB fixAttribDef ()
+DECLARE FUNCTION moveX% (direction AS ANY, x%, y%, pelSkip!, block%())
+DECLARE FUNCTION moveY% (direction AS ANY, x%, y%, pelSkip!, block%())
+DECLARE SUB pageToPrevious ()
+DECLARE SUB bSaveScreen (file AS STRING)
+DECLARE SUB nesPalPick (attribute%, hue AS ANY, tint%)
+
+TYPE ColorType
+        r AS INTEGER
+        g AS INTEGER
+        b AS INTEGER
+END TYPE
+
+TYPE PaletteType
+        lite AS ColorType
+        med AS ColorType
+        dark AS ColorType
+END TYPE
+
+TYPE PlanarType
+        x AS INTEGER
+        y AS INTEGER
+END TYPE
+
+TYPE ImageType
+        x1 AS INTEGER
+        x2 AS INTEGER
+        y1 AS INTEGER
+        y2 AS INTEGER
+        bpp AS INTEGER
+        p AS INTEGER
+        arrType AS DataType
+        arrSize AS INTEGER
+END TYPE
+
+' Structure for holding state of a sprite as it moves across the plane (space
+'and time)
+TYPE SpatialType
+        x AS INTEGER
+        y AS INTEGER
+        frame AS INTEGER 'current sprite pose
+        direction AS DirectionType
+        cycle AS INTEGER 'relative iterator for a sprite's frame rate
+        spriteFrameRate AS INTEGER
+        pelSkip AS SINGLE 'speed
+        maxJump AS INTEGER
+        isJumping AS INTEGER
+        jumpStep AS SINGLE 'keeps track of current jump
+        isFalling AS INTEGER
+        fallStep AS SINGLE 'keeps track of current fall
+END TYPE
+
+
+DECLARE FUNCTION hasValInArr% (value%, array%())
+DECLARE SUB remove (value%, array%())
+DECLARE FUNCTION firstOccuranceOf% (value%, array%())
+DECLARE SUB removeAt (index%, array%())
+DECLARE SUB copyArray (fromArr%(), toArr%())
+DECLARE SUB add (value%, array%())
+DECLARE FUNCTION pop% (array%())
+DECLARE FUNCTION sizeOf% (array%())
+DECLARE SUB push (value%, array%())
+DECLARE SUB removeMany (array%(), exclude%())
+
+DECLARE FUNCTION decToBin$ (decimal#)
+DECLARE FUNCTION fileExists% (file$)
+DECLARE FUNCTION getBit% (decimal%, position%)
+DECLARE FUNCTION bitShiftLeft% (decimal%, shifts%)
+DECLARE FUNCTION bitShiftRight% (decimal%, shifts%)
+DECLARE FUNCTION peekTick% ()
+DECLARE SUB sortPairAscend (array%(), otherArray%())
+DECLARE SUB hold (delay%)
+DECLARE FUNCTION binToDec# (bit$)
+DECLARE FUNCTION decToBaseN$ (baseTen#, n%)
+DECLARE FUNCTION decToHex$ (baseTen#)
+DECLARE FUNCTION isNil% (value$)
+DECLARE FUNCTION getConfig$ (key$)
+DECLARE SUB genFat ()
+DECLARE SUB logit (message$, context$, module$, isError%)
+DECLARE FUNCTION toBool% (char$)
+DECLARE FUNCTION getIfHasConfig$ (key$)
+DECLARE SUB teardownTest ()
+DECLARE SUB center (text$)
+
+REM $INCLUDE: 'c:\qb4.5\qb.bi'
+
+
+DECLARE SUB controlPlayer (guy AS ANY, block%(), gravityOn%)
+DECLARE SUB fadeOut (arg%, interval%, exclude%())
+DECLARE SUB fadeOutAll (arg%, interval%)
+DECLARE SUB jump (guy AS ANY, block%())
+DECLARE SUB doGravity (guy AS ANY, fallMultiplier!, block%())
+DECLARE SUB terminate ()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CONST True% = -1
+CONST False% = 0
+CONST UnitWidth% = 16
+CONST UnitHeight% = 16
+CONST DefaultArr% = (4 + ((UnitWidth + 7) \ 8) * 4 * UnitHeight) \ 2
+CONST NormalizedUnitWidth% = UnitWidth - 1
+CONST NormalizedUnitHeight% = UnitHeight - 1
+CONST Frame1% = 0
+CONST Frame1Mask% = DefaultArr + 1 ' start @ 67
+CONST Frame1Left% = DefaultArr * 2 + 1 ' start @ 133
+CONST Frame1LeftMask% = DefaultArr * 3 + 1  ' start @ 199
+CONST Frame2% = DefaultArr * 4 + 1 ' start @ 265
+CONST Frame2Mask% = DefaultArr * 5 + 1 ' start @ 331
+CONST Frame2Left% = DefaultArr * 6 + 1 ' start @ 397
+CONST Frame2LeftMask% = DefaultArr * 7 + 1 ' start @ 463
+CONST Restorer% = DefaultArr * 8 + 1 ' start @ 529
+CONST SpriteArr% = DefaultArr * 9
+CONST SpriteXMax% = 320 - UnitWidth
+CONST SpriteXMin% = 0
+CONST SpriteYMax% = 200 - UnitHeight
+CONST SpriteYMin% = 0
+CONST SpriteYConvertedMin% = 0
+CONST SpriteYConvertedMax% = SpriteYMax \ UnitHeight
+CONST LeftFramesOffset% = DefaultArr * 2
+CONST CyclesPerSpriteFrame% = 5
+
+CONST ViewPage% = 0
+CONST Buffer% = 1
+CONST SpriteSheet% = 2
+CONST TileSheet% = 3
+CONST Integers$ = "i"
+CONST Longs$ = "L"
+CONST SFloat$ = "s"
+CONST DFloat$ = "d"
+CONST Rightward$ = "r"
+CONST Leftward$ = "l"
+CONST Upward$ = "u"
+CONST Downward$ = "d"
+CONST RightButton% = 77
+CONST LeftButton% = 75
+CONST DownButton% = 80
+CONST UpButton% = 72
+CONST BButton% = 48 ' B
+CONST AButton% = 57 ' Spacebar
+CONST StartButton% = 44 ' Z
+CONST SelectButton% = 45 ' X
+CONST KeyHandlerKillCall% = 0
+CONST Black% = 0
+CONST Gray% = 1
+CONST Indigo% = 2
+CONST Blue% = 3
+CONST Violet% = 4
+CONST Pink% = 5
+CONST Red% = 6
+CONST Orange% = 7
+CONST Burnt% = 8
+CONST Brown% = 9
+CONST Forest% = 10
+CONST Green% = 11
+CONST Celadon% = 12
+CONST Cadet% = 13
+
+COMMON SHARED t AS SafeType
+t.ViewPage.value = ActiveView
+t.Buffer.value = Buffer
+t.SpriteSheet.value = SpriteSheet
+t.TileSheet.value = TileSheet
+t.Integers.value = Integers
+t.Longs.value = Longs
+t.SFloat.value = SFloat
+t.DFloat.value = DFloat
+t.Rightward.value = Rightward
+t.Leftward.value = Leftward
+t.Downward.value = Downward
+t.Upward.value = Upward
+t.RightButton.value = RightButton
+t.LeftButton.value = LeftButton
+t.DownButton.value = DownButton
+t.UpButton.value = UpButton
+t.BButton.value = BButton
+t.AButton.value = AButton
+t.StartButton.value = StartButton
+t.SelectButton.value = SelectButton
+t.KeyHandlerKillCall.value = KeyHandlerKillCall
+t.Black.value = Black
+t.Indigo.value = Indigo
+t.Violet.value = Violet
+t.Pink.value = Pink
+t.Red.value = Red
+t.Orange.value = Orange
+t.Burnt.value = Burnt
+t.Brown.value = Brown
+t.Forest.value = Forest
+t.Green.value = Green
+t.Celadon.value = Celadon
+t.Cadet.value = Cadet
+
+
