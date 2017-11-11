@@ -54,7 +54,7 @@ qb /l qcumber /run qcumber\CD2SRC.BAS
 
 Globals
 -----
-###External
+### External
 The 't' namespace are user-defined types, giving some degree of type safety
 
 * True
@@ -81,7 +81,7 @@ The 't' namespace are user-defined types, giving some degree of type safety
 * t.SelectButton
 * t.KeyHandlerKillCall
 
-###Internal
+### Internal
 The Qcumber lib uses these internally and you likely won't need them; use at your own risk
 
 * UnitWidth
